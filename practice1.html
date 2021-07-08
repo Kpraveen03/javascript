@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice1</title>
+</head>
+<body>
+    
+    <label for="firstNumber">FIRSTNUMBER:</label>
+    <input type="number" id="firstNumber" /><br>
+    <label for="secondNumber">SECONDNUMBER:</label>
+    <input type="number" id="secondNumber" /><br>
+    
+    <button onclick="sum()">SUM</button>
+    <button onclick="sub()">SUB</button>
+    <button onclick="mul()">MUL</button>
+    <button onclick="div()">DIV</button>
+    <button onclick="mod()">MOD</button><br>
+     
+     <input id="clear"/>
+    <button onclick="clearResult()" >CLEAR</button>
+<script>
+    function sum(){
+        let firstVal = document.getElementById('firstNumber').value;
+        let secondVal = document.getElementById("secondNumber").value;
+         sum = Number(firstVal)+Number(secondVal);
+         document.getElementById("clear").value=sum;
+         }
+         function sub(){
+             let firstVal=document.getElementById('firstNumber').value;
+             let secondVal=document.getElementById('secondNumber').value;
+             sub = Number(firstVal) - Number(secondVal);
+             document.getElementById('clear').value=sub;
+         }
+         function mul(){
+             let firstVal=document.getElementById('firstNumber').value;
+             let secondVal=document.getElementById('secondNumber').value;
+             mul = Number(firstVal) * Number(secondVal);
+             document.getElementById('clear').value=mul;
+         }
+         function div(){
+             let firstVal=document.getElementById('firstNumber').value;
+             let secondVal=document.getElementById('secondNumber').value;
+             div = Number(firstVal) / Number(secondVal);
+             document.getElementById('clear').value=div;
+         }
+         function mod(){
+             let firstVal=document.getElementById('firstNumber').value;
+             let secondVal=document.getElementById('secondNumber').value;
+             mod = Number(firstVal) % Number(secondVal);
+             document.getElementById('clear').value=mod;
+         }
+         function clearResult(){
+             document.getElementById('clear').value='';
+         }
+    </script>
+</body>
+</html>
